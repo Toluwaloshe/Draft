@@ -26,13 +26,14 @@
 
     <!-- d3 JavaScript -->
     <script src="https://d3js.org/d3.v4.min.js"></script>
-    
-    
+
+
     <!-- Set up CSS Style sheet -->
     <link rel="stylesheet" href="../static/css/style.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
     <!-- Title of webpage -->
-    <title>Wonder Women | Final Project | Female Participation in the Workforce</title>
+    <title>Wonder Women | Final Project 2 | Proof of Gender Biased Job Descriptions</title>
 
 </head>
 
@@ -46,13 +47,13 @@
         </button>
 
          <!-- Individually linked pages in navigation bar -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item">
                 <a class="nav-link" href="summary.html">Summary</a>
               </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Participation<span class="sr-only">(current)</span></a>
+              <li class="nav-item">
+                <a class="nav-link" href="participation.html">Participation</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="gdp.html">GDP</a>
@@ -60,8 +61,8 @@
               <li class="nav-item">
                 <a class="nav-link" href="bias.html">Bias</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="proof.html">Proof</a>
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Proof<span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="tool.html">Tool</a>
@@ -74,11 +75,11 @@
     <div class="container-fluid">
     
         <!-- Row 1 = Title at Top -->
-        <div class="row" style="background-color: #DAA095;">
+        <div class="row" style="background-color: #FBEBBB;">
             <!-- Sets top row to entire page width (12) -->
             <div class="col-md-12 text-center">
             <br>
-            <h1 class="display-4">Women in the Workforce</h1>
+            <h1 class="display-4 h1phase2">Women in the Workforce</h1>
             <br>
             </div>
         </div>
@@ -87,43 +88,84 @@
 
         <!-- Row 2 -->
         <div class="row">
+            <!-- Lefthand column -->
+            <!-- Set first row's columns to half screen (50% width: 6), on mobile 'xs' and desktop 'md' -->
+            <div class="col-xs-6 col-md-6">
+                <h3 class= "h3phase2"><b>Visual # 1</b></h3>
+                <div id="linegraph"></div>
+            </div>
 
-
-            <!-- Sets top row to entire page width (12) -->
-            <div class="col-md-12">
-                <br>
-                <h3>
-                    <b>
-                    Map: Female Workforce Participation - Annual Breakdown by Continent and Workforce Participation Range (1990-2018)
-                    </b>
-                </h3>
-                <div id="fem-map"></div>
-
+            <!-- Righthand column -->
+            <div class="col-xs-6 col-md-6">
+                <h3 class= "h3phase2"><b>Visual #2</b></h3>
+                <div id="barchart"></div>
             </div>
         </div>
 
         <br>
-       
 
+        <!-- Row 3 -->
         <div class="row">
             <!-- Lefthand column -->
-            <div class="details-text-box col-xs-12 col-md-12">
-                <li>Use the slider to select the year you want to look at</li>
-                <li> Use the layout control to select a map style and filter continent</li>
-                <li> Click on the map to zoom in to a country</li>
-                <li> Click on the extend icon on the top left corner to zoom out</li>
+            <div class="summary-text-box col-xs-6 col-md-6">
+                <p> TBD Description</p>
+            </div>
+
+            <!-- Righthand column -->
+            <div class="summary-text-box col-xs-6 col-md-6">
+                <p> TBD Description
+                </p>
             </div>
         </div>
 
+        <!-- Row 4 -->
+        <div class="row fourth-row">
+            <!-- Lefthand column -->
+            <div class="col-xs-6 col-md-6">
+            <!-- <div class="col"> -->
+
+                <h3 class= "h3phase2"><b> Visual #3</b></h3>
+                <div id="fem-map-sum"></div>
+            </div>
+
+            <!-- Righthand column -->
+            <div class="col-xs-6 col-md-6">
+                <h3 class= "h3phase2"><b>Visual #4</b></h3>
+                <div id="gdp-map-sum"></div>
+            </div>
+        </div>
+
+        <!-- Row 5 -->
+        <div class="row">
+            <!-- Lefthand column -->
+            <div class="summary-text-box col-xs-6 col-md-6">
+                <p> TBD Description</p>
+            </div>
+
+            <!-- Righthand column -->
+            <div class="summary-text-box col-xs-6 col-md-6">
+                <p> TBD Description</p>
+            </div>
+        </div>
         <br>
         <br>
         <br>
         <br>
         <br>
-      </div>
-  
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+     
+       
+
         <!-- Women's background image at bottom (scaleable) -->
         <div class="background fixed-bottom text-center"><img src="../static/img/1RowOfWomen_shutterstock_1662016453_cropped.jpg" class="img-fluid" alt="Responsive image"/></div>
+    
     </div>
 
 <!-- Copyright footer (centered) -->
@@ -131,7 +173,15 @@
     <p><small>© Wonder Women 2020</small></p> 
 </footer>
 
-<script src="https://d3js.org/d3.v5.min.js"></script>
+<!-- <script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="../static/js/linegraph.js"></script>
+<script src="../static/js/barchart.js"></script>
 <script type="text/javascript" src="../static/data/merged_workforce_data_geo.js"></script>
-<script type="text/javascript" src="../static/js/logic_details.js"></script>
+<script type="text/javascript" src="../static/js/logic_summary.js"></script>
+<script type="text/javascript" src="../static/data/merged_GDP_data_geo.js"></script>
+<script type="text/javascript" src="../static/js/SliderControl.js"></script>
+<script type="text/javascript" src="../static/js/summary_gdp_choropleth.js"></script> -->
+
+
 </body>
+</html>

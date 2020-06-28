@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="../static/css/style.css">
 
     <!-- Title of webpage -->
-    <title>Wonder Women | Project 2 | GDP Growth</title>
+    <title>Wonder Women | Final Project | Tool</title>
 
 </head>
 
@@ -39,7 +39,7 @@
     
     <!-- Navigation bar at top (sticky) -->
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color: #56222E;">
-        <a class="navbar-brand" href="index.html">Wonder Women | Project 2</a>
+        <a class="navbar-brand" href="index.html">Wonder Women | Final Project</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -57,13 +57,13 @@
                 <a class="nav-link" href="gdp.html">GDP</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="index2.html">Gendered Wording Summary</a>
+                <a class="nav-link" href="bias.html">Bias</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="summary2.html">Gendered Wording Viz</a>
+                <a class="nav-link" href="proof.html">Proof</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Gendered Wording Tool<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#">Tool<span class="sr-only">(current)</span></a>
               </li>
             </ul>
           </div>
@@ -92,24 +92,50 @@
                 <br>
                 <h3 class= "h3phase2">
                     <b>
-                    TBD Headline
+                    Write Smart Job Descriptions with the help of Wonder Women Editor
                     </b>
                 </h3>
-                <div id="gdp-map"></div>
-
             </div>
         </div>
 
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-  
-        <!-- Women's background image at bottom (scaleable) -->
-        <!-- <div class="background fixed-bottom text-center"><img src="../static/img/1RowOfWomen_shutterstock_1662016453_cropped.jpg" class="img-fluid" alt="Responsive image"/></div> -->
+        <!-- Row 3 -->
 
+        <div class="row">
+          <div class="container text-box col">
+            <h1 class="display-5 font-weight-light">Wonder Women Editor</h1>
+            <div id="left">
+              <textarea name="" id="text-area" rows="10" style="margin: 0px; width: 1071px; height: 207px;"></textarea>
+              <br>
+              <button onclick="format()">Click Me</button>
+              <br>
+              <br>
+              <div id="output"></div>
+          </div>
+
+            <div id="right">
+                <div id="adverb" class="adverb counter"></div>
+                <div id="passive" class="passive counter"></div>
+                <div id="complex" class="complex counter"></div>
+                <div id="hardSentence" class="hardSentence counter"></div>
+                <div id="veryHardSentence" class="veryHardSentence counter"></div>
+            </div>         
+          </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <!-- Women's background image at bottom (scaleable) -->
+        <div class="background fixed-bottom text-center"><img src="../static/img/1RowOfWomen_shutterstock_1662016453_cropped.jpg" class="img-fluid" alt="Responsive image"/></div>
+      </div>
     </div>
 
 <!-- Copyright footer (centered) -->
@@ -121,5 +147,6 @@
 <script type="text/javascript" src="../static/data/merged_GDP_data_geo.js"></script>
 <script type="text/javascript" src="../static/js/SliderControl.js"></script>
 <script type="text/javascript" src="../static/js/detail_gdp_choropleth.js"></script>  -->
+<script src="../static/js/app.js"></script>
 
 </body>
